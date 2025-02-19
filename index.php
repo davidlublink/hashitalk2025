@@ -4,7 +4,7 @@
       <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div style="color: white; font-size:400%;">
+        <div style="color: white; font-size:200%;">
 <?php
 
     $dsn = "mysql:host=".$_ENV['MYSQL_HOST'].";dbname=".$_ENV['MYSQL_DB'].";charset=utf8mb4;port=".$_ENV['MYSQL_PORT']."";
