@@ -1,7 +1,16 @@
-job "redis-cache" {
+/* redis-cli -h 192.168.34.1 -p 28107 */
+
+job "rs-cache" {
 
   group "cache" {
-    count = 1
+
+    network {
+      port "db" {
+        to           = 6379
+        host_network = "private"
+      }
+    }
+
     task "redis" {
       driver = "docker"
       config {
@@ -9,19 +18,13 @@ job "redis-cache" {
         ports = ["db"]
       }
       service {
-        name = "fun-redis"
+        name = "redis"
         port = "db"
         check {
           type     = "tcp"
           interval = "10s"
           timeout  = "2s"
         }
-      }
-    }
-    network {
-      port "db" {
-        to           = 6379
-        host_network = "private"
       }
     }
   }

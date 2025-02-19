@@ -2,9 +2,7 @@ job "MySQL-Secure-Demo" {
 
   group "mysql" {
 
-
     vault { policies = ["database-demo"] }
-
 
     task "mysql" {
       driver = "docker"
@@ -34,7 +32,6 @@ job "MySQL-Secure-Demo" {
       env {
         MYSQL_ROOT_PASSWORD = "F1VE-Glak-ofs-C0L0N"
       }
-
 
       resources {
         memory = 1024

@@ -2,7 +2,6 @@
 job "MyCoolWebPHPPage" {
 
   group "php" {
-    count = 1
 
     vault {
       policies = ["consumer-demo"]
@@ -27,17 +26,14 @@ job "MyCoolWebPHPPage" {
       template {
         env  = true
         data = <<EOH
-         {{ range service "database" }}
+{{ range service "database" }}
 MYSQL_HOST="{{ .Address }}"
 MYSQL_PORT="{{ .Port }}"
-         {{ end }}
+{{ end }}
 EOH
 
         destination = "local/mysqlserver.env"
       }
-
-
-
 
       service {
         name = "web-application"

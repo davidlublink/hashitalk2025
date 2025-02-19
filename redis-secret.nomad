@@ -1,7 +1,7 @@
 
 /* redis-cli -h 192.168.34.1 -p 26270 -a Oc-SE5EN-Kron-ag-DOLLAR_SIGN */
 
-job "redis-cache" {
+job "redis-cache-demo" {
 
   group "cache" {
     count = 1
@@ -35,7 +35,7 @@ notify-keyspace-events AKE
 
 
       service {
-        name = "fun-redis"
+        name = "redis"
         port = "db"
         check {
           type     = "tcp"
