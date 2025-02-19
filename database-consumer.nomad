@@ -1,5 +1,5 @@
 
-job "database-consumer" {
+job "MyCoolWebPHPPage" {
 
   group "php" {
     count = 1
@@ -10,7 +10,7 @@ job "database-consumer" {
     task "php" {
       driver = "docker"
       config {
-        image = "davidlublink/hashitalks:5"
+        image = "davidlublink/hashitalks:6"
         ports = ["web"]
       }
 

@@ -1,4 +1,4 @@
-job "mysql-secure" {
+job "MySQL-Secure-Demo" {
 
   group "mysql" {
 
