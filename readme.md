@@ -2,8 +2,6 @@
 
 ## Solving key technology challenges with HashiStack.
 
-
-
 This repository contains the code samples that were used in the presentation I gave at HashiTalk 2025.
 
 It also contains my slides in PDF format.
