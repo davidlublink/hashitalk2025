@@ -32,7 +32,7 @@ job "MySQL-Secure-Demo" {
           timeout  = "2s"
         }
       }
-      /* 
+      /* Don't store passwords in Nomad files */
       env {
         MYSQL_RANDOM_ROOT_PASSWORD = "YES"
       }
