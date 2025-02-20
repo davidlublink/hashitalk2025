@@ -1,6 +1,6 @@
 /* redis-cli -h 192.168.34.1 -p 28107 */
 
-job "rs-cache" {
+job "redis-cache1" {
 
   group "cache" {
 
